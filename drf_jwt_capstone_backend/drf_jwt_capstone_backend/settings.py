@@ -40,6 +40,13 @@ INSTALLED_APPS = [
     'rest_framework',
     'authentication.apps.AuthenticationConfig',
     'corsheaders',
+    'explorers.apps.ExplorersConfig',
+    'entertainments.apps.EntertainmentsConfig',
+    'explorerentertainment.apps.ExplorerentertainmentConfig',
+    'explorerentrating.apps.ExplorerentratingConfig',
+    'explorerrestaurant.apps.ExplorerrestaurantConfig',
+    'explorerrestrating.apps.ExplorerrestratingConfig',
+    'restaurants.apps.RestaurantsConfig',
 ]
 
 MIDDLEWARE = [
