@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class ExplorerentertainmentConfig(AppConfig):
+class ExplorerentratingsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'explorerentertainment'
+    name = 'explorerentratings'

@@ -42,10 +42,10 @@ INSTALLED_APPS = [
     'corsheaders',
     'explorers.apps.ExplorersConfig',
     'entertainments.apps.EntertainmentsConfig',
-    'explorerentertainment.apps.ExplorerentertainmentConfig',
-    'explorerentrating.apps.ExplorerentratingConfig',
-    'explorerrestaurant.apps.ExplorerrestaurantConfig',
-    'explorerrestrating.apps.ExplorerrestratingConfig',
+    'explorerentertainments.apps.ExplorerentertainmentsConfig',
+    'explorerentratings.apps.ExplorerentratingsConfig',
+    'explorerrestaurants.apps.ExplorerrestaurantsConfig',
+    'explorerrestratings.apps.ExplorerrestratingsConfig',
     'restaurants.apps.RestaurantsConfig',
 ]
 

@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class ExplorerentratingConfig(AppConfig):
+class ExplorerrestaurantsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'explorerentrating'
+    name = 'explorerrestaurants'
