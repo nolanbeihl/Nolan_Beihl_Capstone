@@ -6,6 +6,6 @@ class Restaurant(models.Model):
     type = models.CharField(max_length=30)
     price = models.CharField(max_length=5)
     review_rating = models.IntegerField()
-    date_visited = models.IntegerField()
-    location = models.IntegerField()
+    date_visited = models.DateField()
+    location = models.CharField(max_length=250)
  

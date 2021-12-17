@@ -11,9 +11,11 @@ from django.db import models
 class Explorer(models.Model):
     firstName = models.CharField(max_length=30)
     lastName = models.CharField(max_length=30)
+    total_refresh = models.IntegerField()
+    total_usage = models.IntegerField()
     restScore = models.ForeignKey('explorerrestratings.ExplorerRestRating', on_delete=models.CASCADE)
     entScore = models.ForeignKey('explorerentratings.ExplorerEntRating', on_delete=models.CASCADE)
-    location = models.IntegerField()
+    location = models.CharField(max_length=250)
     savedEnt = models.ForeignKey('explorerentertainments.ExplorerEntertainment', blank=True, null=True,  on_delete=models.CASCADE)
     savedRest = models.ForeignKey('explorerrestaurants.ExplorerRestaurant', blank=True, null=True,  on_delete=models.CASCADE)
    
