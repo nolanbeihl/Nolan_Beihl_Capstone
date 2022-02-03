@@ -11,5 +11,11 @@ from django.contrib.auth.models import AbstractUser
 
 
 class User(AbstractUser):
-    middle_name = models.CharField(max_length=20)
+    saved_rest = models.CharField(max_length=100)
+    saved_ent = models.CharField(max_length=100)
+    rest_score = models.IntegerField(max_length=10)
+    ent_score = models.IntegerField(max_length=10)
+    location = models.CharField(max_length=100)
+    total_refresh = models.IntegerField(max_length=100)
+    total_usage = models.IntegerField(max_length=100)
     
