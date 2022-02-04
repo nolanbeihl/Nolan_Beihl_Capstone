@@ -18,6 +18,4 @@ class User(AbstractUser):
     location = models.CharField(max_length=100)
     total_refresh = models.IntegerField(max_length=100)
     total_usage = models.IntegerField(max_length=100)
-    
-    def save_ent():
-        
+  
