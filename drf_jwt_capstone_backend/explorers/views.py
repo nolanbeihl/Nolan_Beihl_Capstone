@@ -13,7 +13,7 @@ class ExplorerList(APIView):
 
     permission_classes = [AllowAny]
 
-    def get(self,request):
+    def post(self,request):
         explorers = Explorer.objects.all()
         serializer = ExplorerSerializer(explorers, many=True)
         return Response(serializer.data)
