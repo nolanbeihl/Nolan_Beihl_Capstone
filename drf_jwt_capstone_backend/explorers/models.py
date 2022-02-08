@@ -13,11 +13,11 @@ class Explorer(models.Model):
     lastName = models.CharField(max_length=30)
     total_refresh = models.IntegerField()
     total_usage = models.IntegerField()
-    restScore = models.ForeignKey('explorerrestratings.ExplorerRestRating', on_delete=models.CASCADE)
-    entScore = models.ForeignKey('explorerentratings.ExplorerEntRating', on_delete=models.CASCADE)
+    # restScore = models.ForeignKey('explorerrestratings.ExplorerRestRating', on_delete=models.CASCADE)
+    # entScore = models.ForeignKey('explorerentratings.ExplorerEntRating', on_delete=models.CASCADE)
     location = models.CharField(max_length=250)
-    savedEnt = models.ForeignKey('explorerentertainments.ExplorerEntertainment', blank=True, null=True,  on_delete=models.CASCADE)
-    savedRest = models.ForeignKey('explorerrestaurants.ExplorerRestaurant', blank=True, null=True,  on_delete=models.CASCADE)
+    # savedEnt = models.ForeignKey('explorerentertainments.ExplorerEntertainment', blank=True, null=True,  on_delete=models.CASCADE)
+    # savedRest = models.ForeignKey('explorerrestaurants.ExplorerRestaurant', blank=True, null=True,  on_delete=models.CASCADE)
    
     # def __str__(self):
     #    return self.firstName
