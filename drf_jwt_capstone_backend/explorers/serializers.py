@@ -4,4 +4,4 @@ from .models import Explorer
 class ExplorerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Explorer
-        fields = ['firstName', 'lastName', 'location', 'total_refresh', 'total_usage',]
+        fields = ['firstName', 'lastName', 'street', 'city', 'state', 'total_refresh', 'total_usage', 'restScore', 'entScore', 'savedEnt', 'savedRest']
