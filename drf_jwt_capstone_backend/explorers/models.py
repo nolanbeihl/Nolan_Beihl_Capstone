@@ -11,17 +11,18 @@ from django.db import models
 
 
 class Explorer(models.Model):
-    firstName = models.CharField(max_length=30)
-    lastName = models.CharField(max_length=30)
-    street = models.CharField(max_length=50, blank=True, null=True)
-    city = models.CharField(max_length=50, blank=True, null=True)
+    firstName = models.CharField(max_length=100)
+    lastName = models.CharField(max_length=100)
+    userName= models.CharField(max_length=100)
+    street = models.CharField(max_length=100, blank=True, null=True)
+    city = models.CharField(max_length=100, blank=True, null=True)
     state = models.CharField(max_length=4, blank=True, null=True)
-    total_refresh = models.IntegerField(blank=True, null=True)
-    total_usage = models.IntegerField(blank=True, null=True)
-    restScore = models.ForeignKey('explorerrestratings.ExplorerRestRating',blank=True, null=True, on_delete=models.CASCADE)
-    entScore = models.ForeignKey('explorerentratings.ExplorerEntRating', blank=True, null=True, on_delete=models.CASCADE)
-    savedEnt = models.ForeignKey('explorerentertainments.ExplorerEntertainment', blank=True, null=True,  on_delete=models.CASCADE)
-    savedRest = models.ForeignKey('explorerrestaurants.ExplorerRestaurant', blank=True, null=True,  on_delete=models.CASCADE)
+    # total_refresh = models.IntegerField(blank=True, null=True)
+    # total_usage = models.IntegerField(blank=True, null=True)
+    # restScore = models.ForeignKey('explorerrestratings.ExplorerRestRating',blank=True, null=True, on_delete=models.CASCADE)
+    # entScore = models.ForeignKey('explorerentratings.ExplorerEntRating', blank=True, null=True, on_delete=models.CASCADE)
+    # savedEnt = models.ForeignKey('explorerentertainments.ExplorerEntertainment', blank=True, null=True,  on_delete=models.CASCADE)
+    # savedRest = models.ForeignKey('explorerrestaurants.ExplorerRestaurant', blank=True, null=True,  on_delete=models.CASCADE)
    
     # def __str__(self):
     #    return self.firstName
