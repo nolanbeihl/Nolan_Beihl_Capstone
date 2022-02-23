@@ -20,7 +20,7 @@ class User(AbstractUser):
     street = models.CharField(max_length=100)
     city = models.CharField(max_length=100)
     state = models.CharField(max_length=100)
-    userName = models.CharField(max_length=100)
+    # userName = models.CharField(max_length=100)
     password = models.CharField(max_length=100)
     # total_refresh = models.IntegerField(max_length=100)
     # total_usage = models.IntegerField(max_length=100)
