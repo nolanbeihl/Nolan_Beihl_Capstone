@@ -17,16 +17,16 @@ class RegistrationSerializer(serializers.ModelSerializer):
         # If added new columns through the User model, add them in the fields
         # list as seen below
         fields = ('street','city','state', 'password', 'email',
-                  'firstName', 'lastName' )
-                #   'savedEnt','savedRest','restScore','entScore',, 'total_usage', 'total_refresh','userName'
+                  'first_name', 'last_name','username' )
+                #   'savedEnt','savedRest','restScore','entScore',, 'total_usage', 'total_refresh',
 
     def create(self, validated_data):
 
         user = User.objects.create(
-            # userName=validated_data['userName'],
+            username=validated_data['username'],
             email=validated_data['email'],
-            firstName=validated_data['firstName'],
-            lastName=validated_data['lastName'],
+            first_name=validated_data['first_name'],
+            last_name=validated_data['last_name'],
             # restScore=validated_data['rest_score'],
             # entScore=validated_data['ent_score'],
             street=validated_data['street'],

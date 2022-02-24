@@ -15,13 +15,9 @@ class User(AbstractUser):
     # savedEnt = models.CharField(max_length=100)
     # restScore = models.IntegerField(max_length=10)
     # entScore = models.IntegerField(max_length=10)
-    firstName= models.CharField(max_length=100)
-    lastName= models.CharField(max_length=100)
     street = models.CharField(max_length=100)
     city = models.CharField(max_length=100)
     state = models.CharField(max_length=100)
-    # userName = models.CharField(max_length=100)
-    password = models.CharField(max_length=100)
     # total_refresh = models.IntegerField(max_length=100)
     # total_usage = models.IntegerField(max_length=100)
   
