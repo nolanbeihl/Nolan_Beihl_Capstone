@@ -24,7 +24,7 @@ class ExplorerList(APIView):
         # explorers = Explorer.objects.all()
         # serializer = ExplorerSerializer(explorers, many=True)
         # return Response(serializer.data)
-
+    # permission_classes = [IsAuthenticated]
     def get(self,request):
         explorers = Explorer.objects.all()
         serializer = ExplorerSerializer(explorers, many=True)
