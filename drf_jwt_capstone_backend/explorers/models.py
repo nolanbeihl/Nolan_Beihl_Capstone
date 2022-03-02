@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # from drf_jwt_capstone_backend.explorerentratings.models import ExplorerEntRating
 # from drf_jwt_capstone_backend.explorerentertainments.models import ExplorerEntertainment
 # from drf_jwt_capstone_backend.explorerentratings.models import ExplorerEntRating
