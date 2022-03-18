@@ -10,25 +10,38 @@ from .serializers import ExplorerSerializer
 from django.contrib.auth import get_user_model
 User=get_user_model
 
-class ExplorerList(APIView):
 
-    permission_classes = [AllowAny]
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def create_explorer(request):
+    serializer = ExplorerSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def post(self,request):
+    # explorers = Explorer.objects.all()
+    # serializer = ExplorerSerializer(explorers, many=True)
+    # return Response(serializer.data)
+@api_view(['GET','POST'])
+@permission_classes ([IsAuthenticated])
+def explorer_info(request):
+    if request.method =='POST':
         serializer = ExplorerSerializer(data=request.data)
         if serializer.is_valid():
-            serializer.save()
+            serializer.save(user=request.user)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-        # explorers = Explorer.objects.all()
-        # serializer = ExplorerSerializer(explorers, many=True)
-        # return Response(serializer.data)
-    permission_classes = [IsAuthenticated]
-    def get(self,request):
-        explorers = Explorer.objects.all()
-        serializer = ExplorerSerializer(explorers, many=True)
+    elif request.method =='GET':
+        explorer = Explorer.objects.filter(user_id=request.user.id)
+        serializer = ExplorerSerializer(explorer, many=True)
         return Response(serializer.data)
+
+    # serializer = ExplorerSerializer(data=request.data)
+    
+    # explorers = Explorer.objects.all()
+    # serializer = ExplorerSerializer(explorers, many=True)
+    # return Response(serializer.data)
 
 
 
