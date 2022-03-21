@@ -33,8 +33,8 @@ def explorer_info(request):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     elif request.method =='GET':
-        explorer = Explorer.objects.filter(user_id=request.user.id)
-        serializer = ExplorerSerializer(explorer, many=True)
+        explorers = Explorer.objects.filter(id=request.user.id)
+        serializer = ExplorerSerializer(explorers, many=True)
         return Response(serializer.data)
 
     # serializer = ExplorerSerializer(data=request.data)
