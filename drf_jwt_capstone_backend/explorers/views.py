@@ -34,7 +34,7 @@ def explorer_info(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     elif request.method =='GET':
         explorers = Explorer.objects.filter(id=request.user.id)
-        serializer = ExplorerSerializer(explorers, many=True)
+        serializer = ExplorerSerializer(explorers, many=False)
         return Response(serializer.data)
 
     # serializer = ExplorerSerializer(data=request.data)
